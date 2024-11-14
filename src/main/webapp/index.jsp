@@ -1,12 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Apex Hospital - Your Health, Our Priority</title>
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap 4 CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -38,6 +37,29 @@
         .card {
             margin: 15px 0;
         }
+        .facility-card {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .facility-card:hover {
+            transform: scale(1.05);
+        }
+        .facility-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .facility-card-body {
+            padding: 20px;
+        }
+        .facility-card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -68,55 +90,41 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="container text-center my-5">
-        <h2 class="mb-4">Our Services</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="General Checkup">
-                    <div class="card-body">
-                        <h5 class="card-title">General Checkup</h5>
-                        <p class="card-text">Comprehensive health assessments to keep you at your best.</p>
-                        <a href="appointment.jsp" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Emergency Care">
-                    <div class="card-body">
-                        <h5 class="card-title">Emergency Care</h5>
-                        <p class="card-text">24/7 emergency services to handle critical medical situations.</p>
-                        <a href="ambulance.jsp" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Specialist Consultation">
-                    <div class="card-body">
-                        <h5 class="card-title">Specialist Consultation</h5>
-                        <p class="card-text">Expert advice from specialists in various medical fields.</p>
-                        <a href="appointment.jsp" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
+    <!-- Facilities Section -->
     <section class="container my-5">
+        <h2 class="text-center mb-4">Our Facilities</h2>
         <div class="row">
-            <div class="col-md-6">
-                <h3>About Us</h3>
-                <p>Apex Hospital is dedicated to providing top-notch healthcare services with a patient-first approach. Our experienced staff and state-of-the-art facilities ensure quality care for everyone.</p>
-                <a href="contact.jsp" class="btn btn-primary">Contact Us</a>
+            <!-- Facility 1: ICU -->
+            <div class="col-md-4">
+                <div class="facility-card">
+                    <img src="https://media.istockphoto.com/id/926031514/photo/intensive-care-unit.jpg?s=612x612&w=0&k=20&c=mu2gIiYk7gtRAro6ijAkjsd6LcnF3GnTn0gOH9wvTh8=" alt="ICU Facility">
+                    <div class="facility-card-body">
+                        <h5 class="facility-card-title">Intensive Care Unit (ICU)</h5>
+                        <p>The ICU is equipped with the latest technology to provide intensive care to critically ill patients.</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <h3>Location</h3>
-                <p>123 Health St., Wellness City, Medical State</p>
-                <iframe src="https://maps.google.com/maps?q=hospital&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+            <!-- Facility 2: Emergency Room -->
+            <div class="col-md-4">
+                <div class="facility-card">
+                    <img src="https://media.istockphoto.com/id/1156396771/photo/emergency-room.jpg?s=612x612&w=0&k=20&c=V5GFswRGI7vIccpMIg-vbcAK7gkFqLO6bwF1cc6o6XM=" alt="Emergency Room">
+                    <div class="facility-card-body">
+                        <h5 class="facility-card-title">Emergency Room</h5>
+                        <p>Our ER is open 24/7 to handle any medical emergency with quick and efficient care.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 3: X-ray & Radiology -->
+            <div class="col-md-4">
+                <div class="facility-card">
+                    <img src="https://media.istockphoto.com/id/1096174026/photo/x-ray-room.jpg?s=612x612&w=0&k=20&c=RlnQUlTdbIgmsmv6dt0yZPtSyHHb5VV9WsqYwfDNxyM=" alt="X-ray Facility">
+                    <div class="facility-card-body">
+                        <h5 class="facility-card-title">X-ray & Radiology</h5>
+                        <p>Our radiology department offers X-ray, MRI, CT scan, and ultrasound to diagnose a wide range of conditions.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -130,5 +138,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

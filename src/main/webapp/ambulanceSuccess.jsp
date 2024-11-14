@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Appointment Success - Apex Hospital</title>
+    <title>Ambulance Request Success - Apex Hospital</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -46,8 +46,8 @@
     <!-- Success Section -->
     <section class="success-section">
         <div class="container">
-            <h1>Appointment Successfully Booked!</h1>
-            <p>Your appointment has been successfully scheduled. You will receive a confirmation shortly.</p>
+            <h1>Ambulance Request Successful!</h1>
+            <p>Your ambulance request has been successfully received. We are on the way and will reach you shortly.</p>
             <a href="index.jsp" class="btn btn-light btn-lg">Go to Home</a>
         </div>
     </section>
